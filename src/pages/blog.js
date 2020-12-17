@@ -17,18 +17,18 @@ const BlogPage = () => {
             }
         }
     `)
-    const blogArr = data.allMarkdownRemark.edges
     return (
             <Layout>
                 <h1>Blog</h1>
                 <p>Posts will show up here later on.</p>
                 <ol>
                     {
-                        blogArr.map(function(d) {
-                            return (<li>
+                        data.allMarkdownRemark.edges.map((d) => {
+                            return (
+                            <li>
                                 <h2>{d.node.frontmatter.title}</h2>
                                 <p>{d.node.frontmatter.date}</p>
-                                </li>
+                            </li>
                             );
                         })
                     }
