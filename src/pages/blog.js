@@ -12,6 +12,9 @@ const BlogPage = () => {
                             title
                             date
                         }
+                        fields {
+                            slug
+                        }
                     }
                 }
             }
@@ -26,8 +29,10 @@ const BlogPage = () => {
                         data.allMarkdownRemark.edges.map((d) => {
                             return (
                             <li>
+                                <Link to={`/blog/${d.node.fields.slug}`} >
                                 <h2>{d.node.frontmatter.title}</h2>
                                 <p>{d.node.frontmatter.date}</p>
+                                </Link>
                             </li>
                             );
                         })
