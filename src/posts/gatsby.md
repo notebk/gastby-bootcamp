@@ -5,6 +5,8 @@ date: "2020-12-14"
 
 I just launched a new bootcamp!
 
+![Van Gogh](./vagogh.jpg)
+
 ## Topics covered
 
 1. Gatsby
